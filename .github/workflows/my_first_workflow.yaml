@@ -22,4 +22,8 @@ jobs:
         id: echo_github_context
         run: echo "${{github.ref_name}}"
 
+      - name: new run test
+        id: new_run_test
+        run: echo "${{github.action_status}}"
+
   
