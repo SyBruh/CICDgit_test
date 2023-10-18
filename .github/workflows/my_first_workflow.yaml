@@ -18,4 +18,8 @@ jobs:
         id: list_directory
         run: echo "$(ls -l)"
 
+      - name: echo github context
+        id: echo_github_context
+        run: echo "${{github.ref_name}}"
+
   
