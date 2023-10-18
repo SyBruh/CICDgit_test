@@ -33,7 +33,7 @@ jobs:
         with: 
           server_address: ${{secrets.EMAIL_SERVER}}
           server_port: ${{secrets.EMAIL_PORT}}
-          username: ${{secrets.EMAIL_USERNAME}}
+          username: ${{secrets.EMAIL_USER}}
           password: ${{secrets.EMAIL_PASSWORD}}
           to: 2e05a1ef-a1e5-4193-ba16-ccda22ad871b@mailslurp.mx
           from: test@gmail.com
