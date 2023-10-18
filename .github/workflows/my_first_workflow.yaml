@@ -24,6 +24,6 @@ jobs:
 
       - name: new run test
         id: new_run_test
-        run: echo "${{github.action_status}}"
+        run: echo "${{github.action_status}} I am the new guy ${{github.repository}}"
 
   
