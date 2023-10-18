@@ -39,3 +39,7 @@ jobs:
           from: test@gmail.com
           subject: "Github workflow form ${{github.ref_name}}"
           body: "The job is ${{job.status}}"
+
+      - name: checkout my source
+        id: checkout_my_source
+        uses: actions/checkout@v4
