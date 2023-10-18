@@ -26,4 +26,16 @@ jobs:
         id: new_run_test
         run: echo "${{github.action_status}} I am the new guy ${{github.repository}}"
 
-  
+
+      - name: email test
+        id: email_test
+        uses: dawidd6/action-send-mail@v3
+        with: 
+          server_address: ${{secrets.EMAIL_SERVER}}
+          server_port: ${{secrets.EMAIL_PORT}}
+          username: ${{secrets.EMAIL_USERNAME}}
+          password: ${{secrets.EMAIL_PASSWORD}}
+          to: 2e05a1ef-a1e5-4193-ba16-ccda22ad871b@mailslurp.mx
+          from: test@gmail.com
+          subject: "Github workflow form ${{github.ref_name}}"
+          body: "The job is ${{job.status}}"
